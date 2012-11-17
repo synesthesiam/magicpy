@@ -20,7 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import sys, Image, numpy, argparse
+import numpy, argparse
+from PIL import Image
 
 def gen_pattern(width, height):
   return numpy.random.randint(0, 256, (width, height))
@@ -28,10 +29,16 @@ def gen_pattern(width, height):
 if __name__ == '__main__':
 
   parser = argparse.ArgumentParser(description = "Autostereogram (MagicEye) generator")
-  parser.add_argument("depthmap", type=str, help = "Path to grayscale depth-map")
-  parser.add_argument("--output", type=str, default="output.png", help="Path to write output image")
-  parser.add_argument("--pattern-div", type=int, default=8, help = "Width of generated pattern (width n means 1/n of depth-map width)")
-  parser.add_argument("--invert", action="store_true", help = "Invert depth")
+  parser.add_argument("depthmap", type=str,
+          help = "Path to grayscale depth-map (white = close)")
+
+  parser.add_argument("-o", "--output", type=str, default="output.png",
+          help="Path to write output image")
+
+  parser.add_argument("-p", "--pattern-div", type=int, default=8,
+          help = "Width of generated pattern (width n means 1/n of depth-map width)")
+
+  parser.add_argument("-i", "--invert", action="store_true", help = "Invert depthmap (white = far)")
 
   args = parser.parse_args()
   invert = -1 if args.invert else 1
