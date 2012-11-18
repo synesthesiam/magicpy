@@ -8,7 +8,7 @@ Takes a grayscale depthmap (where white is closest, black is farthest), and gene
 
 By default, a random pattern 1/8 the size of the depthmap is repeated and offset to create the effect. There seems to be an art to choosing the right pattern size.
 
-If you string together multiple stereograms, you can make [cool "MagicEye" movies!](synesthesiam.github.com/magicpy/teapot.gif)
+If you string together multiple stereograms, you can make [cool "MagicEye" movies!](http://synesthesiam.com/code.php#stereograms)
 
 Examples
 --------
@@ -19,7 +19,7 @@ Examples
     $ python magicpy.py -p 10 shark.png -o magic-shark.png
 
 ![shark.png](https://raw.github.com/synesthesiam/magicpy/master/shark.png)
-![magic-shark.png](https://raw.github.com/synesthesiam/magicpy/master/magicshark.png)
+![magic-shark.png](https://raw.github.com/synesthesiam/magicpy/master/magic-shark.png)
 
 
 glmagic
