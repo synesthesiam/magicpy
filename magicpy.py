@@ -43,7 +43,7 @@ if __name__ == '__main__':
   args = parser.parse_args()
   invert = -1 if args.invert else 1
 
-  depth_map = Image.open(args.depthmap)
+  depth_map = Image.open(args.depthmap).convert("RGB")
   depth_data = depth_map.load()
 
   out_img = Image.new("L", depth_map.size)
