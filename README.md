@@ -18,8 +18,8 @@ Examples
     # Make random pattern 1/10 of the depthmap size
     $ python magicpy.py -p 10 shark.png -o magic-shark.png
 
-![shark.png](magicpy/blob/master/shark.png)
-![magic-shark.png](magicpy/blob/master/magicshark.png)
+![shark.png](https://raw.github.com/synesthesiam/magicpy/master/shark.png)
+![magic-shark.png](https://raw.github.com/synesthesiam/magicpy/master/magicshark.png)
 
 
 glmagic
@@ -39,5 +39,5 @@ Examples
     # Generate an animated GIF of the teapot
     $ ./make-movie.sh
 
-![teapot.png](magicpy/blob/master/teapot.png)
-![magic-teapot.png](magicpy/blob/master/magic-teapot.png)
+![teapot.png](https://raw.github.com/synesthesiam/magicpy/master/teapot.png)
+![magic-teapot.png](https://raw.github.com/synesthesiam/magicpy/master/magic-teapot.png)
